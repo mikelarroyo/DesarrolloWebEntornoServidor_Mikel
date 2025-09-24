@@ -1,12 +1,14 @@
 <?php
+
 /** Calculadora basica:
  - Funciones normales, anónimas y flecha.
  - Menú con do...while del 1 al 5 (5 = salir).
  * necesito que me valides que los dos numeros sean numeros validados
-*/
+ */
 
 
-function suma($a, $b) {
+function suma($a, $b)
+{
     return $a + $b;
 }
 
@@ -30,13 +32,13 @@ do {
     echo "Elige una opción: ";
     fscanf(STDIN, "%d", $opcion);
 
-    if ($opcion >= 1 && $opcion <= 4 ) {
+    if ($opcion >= 1 && $opcion <= 4) {
         echo "Elige tu primer número: ";
         fscanf(STDIN, "%f", $num1);
 
         echo "Elige tu segundo número: ";
         fscanf(STDIN, "%f", $num2);
-    } 
+    }
 
     switch ($opcion) {
         case 1:
@@ -53,8 +55,5 @@ do {
             break;
         default:
             echo "operacion no válida";
-        }
-    } while ($opcion != 5);
-    ?>
-
- 
+    }
+} while ($opcion != 5);

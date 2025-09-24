@@ -7,11 +7,12 @@ Ejemplo: $por2 = crearMultiplicador(2); echo $por2(5);//10
 
 
 
- function crearMultiplicador($factor){
-    return function($n) use ($factor){
+function crearMultiplicador($factor)
+{
+    return function ($n) use ($factor) {
         return $factor * $n;
-    }
- ;}
+    };
+}
 
 
 

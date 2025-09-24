@@ -30,23 +30,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <title>Calculadora básica</title>
 </head>
-  <style>
+<style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
     }
+
     form {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px;
-      background: #85d8caff;
-      border: 1px solid #ccc;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px;
+        background: #85d8caff;
+        border: 1px solid #ccc;
     }
+
     div {
-      margin: 10px 0;
+        margin: 10px 0;
     }
-  </style>
+</style>
 
 <body>
     <h2>CALCULADORA BÁSICA</h2>
