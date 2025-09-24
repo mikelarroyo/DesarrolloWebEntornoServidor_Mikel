@@ -11,13 +11,15 @@ transforma un array con funciones anonimas:
 $nombres = ["maria", "mikel", "luismi", "victor", "pepe", "ana"];
 
 
-$mayusculas = array_map(function($nombre) {
-    return strtoupper($nombre);
-}, $nombres);
+    $mayusculas = array_map(function($nombre){
+        return strtoupper($nombre);
+    }, $nombres); 
 
+    print_r($mayusculas);
 
-$tratados = array_map(function($nombre) {
-    return "Sr/Sra. " . $nombre;
-}, $mayusculas);
+    $agregar = array_map(function($nombre){
+        return "Sr/Sra.". $nombre;
 
-print_r($tratados);
+    }, $nombres);
+
+    print_r($agregar);

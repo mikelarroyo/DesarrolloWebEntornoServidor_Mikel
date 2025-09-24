@@ -5,8 +5,7 @@ Llama a la funcion usando $multiplicar(3,4)
 
     <?php
     
-    $multiplicar = function ($a,$b){
-    return $a * $b;
+    $multiplicar = function($a , $b){
+        return $a * $b;
     };
-
     echo $multiplicar(3,4);

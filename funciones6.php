@@ -2,6 +2,7 @@
 /** Calculadora basica:
  - Funciones normales, anónimas y flecha.
  - Menú con do...while del 1 al 5 (5 = salir).
+ * necesito que me valides que los dos numeros sean numeros validados
 */
 
 
@@ -16,6 +17,7 @@ $restaAnonima = function ($a, $b) {
 $multiplicacionFlecha = fn($a, $b) => $a * $b;
 
 $divisionFlecha = fn($a, $b) => $b != 0 ? $a / $b : "Error: división por cero";
+
 
 
 do {
@@ -34,7 +36,7 @@ do {
 
         echo "Elige tu segundo número: ";
         fscanf(STDIN, "%f", $num2);
-    }
+    } 
 
     switch ($opcion) {
         case 1:
@@ -53,3 +55,6 @@ do {
             echo "operacion no válida";
         }
     } while ($opcion != 5);
+    ?>
+
+ 

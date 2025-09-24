@@ -9,27 +9,29 @@ Usa la funcion y guarda el resultado en una variable. Usa tipos de datos
 <?php
 
 
-/*funcion normal*/
+ //Ejemplo con funcion normal pasando parametro
 
-$numeros = [2, 5, 6, 8];
-function calcularPromedio($numeros): float
-{
-    return array_sum($numeros) / count($numeros);
-}
-$resultado1 = calcularPromedio($numeros);
+    $numeros = [1,2,3,4,5];
+    
 
-/* Función anónima (closure) */
-$promedioAnonima = function ($numeros): float {
-    return array_sum($numeros) / count($numeros);
-};
-$resultado2 = $promedioAnonima($numeros);
+    function calcularPromedio($array){
+        return array_sum($array) / count($array); 
+    };
 
-//Funcion flecha
+    echo calcularPromedio($numeros) . "\n";
 
-$promedioFlecha = fn($numeros): float => array_sum($numeros) / count($numeros);
-$resultado3 = $promedioFlecha($numeros);
+//Ejemplo funcion anonima
 
-echo $resultado1."\n";
-echo $resultado2."\n";
-echo $resultado3."\n";
+
+    $anonima= function($array){
+        return array_sum($array) / count($array); 
+    };
+
+    echo $anonima($numeros). "\n";
+
+    //Ejemplo funcion flecha
+    
+    $flecha = fn($n) => (array_sum($n) / count ($n));
+
+    echo $flecha($numeros);
 

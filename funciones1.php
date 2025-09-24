@@ -15,29 +15,33 @@ hazlo de forma que incrementar ($contador) reciba el contador como parametro y d
 
 $contador = 0;
 
-//usando  global $contador
-
-function incrementarGlobal() {
+//Ejemplo 1 con global $contador
+function incrementar(){
     global $contador;
+    $contador++;
+    return $contador;
+
+}
+//Ejemplo 2 con GLOBALS ("contador")
+
+$globalContador = 0;
+
+function incrementoGlobals() {
+    $GLOBALS ["globalContador"]++;
+    
+    return $GLOBALS ["globalContador"];    
+}
+
+// Ejemplo 3 pasando parametro contador
+
+$parametroContador=0;
+
+function parametro($contador){
     $contador++;
     return $contador;
 }
 
-// 2. Usando $GLOBALS["contador"]
+echo incrementar(). "\n";
+echo incrementoGlobals(). "\n";
+echo parametro($parametroContador). "\n";
 
-
-function incrementarGlobals() {
-    $GLOBALS["contador"]++;
-    return $GLOBALS["contador"];
-}
-echo incrementarGlobals();
-
-//3 hazlo de forma que incrementar ($contador) reciba el contador como parametro y devuela el nuevo valor
-function incrementarParametro($c) {
-    $c++;
-    return $c;
-}
-
-echo incrementarGlobal()."\n";
-echo incrementarGlobals()."\n";
-echo incrementarParametro($contador)."\n";
